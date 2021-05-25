@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.View
+import android.widget.HorizontalScrollView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -37,7 +38,7 @@ class MainActivity  : AppCompatActivity(), CellClickListener  {
         SharedPreference.init(applicationContext)
         currentWoeid = SharedPreference.loadPreference("_woeid", 0)
 
-        viewManagerWeather = LinearLayoutManager(this)
+        viewManagerWeather = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         viewManagerLocation = LinearLayoutManager(this)
 
         val factory = ViewModelProvider.AndroidViewModelFactory.getInstance(application)
