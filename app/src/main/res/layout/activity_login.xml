@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="My Weather "
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="15dp"
+        app:cardBackgroundColor="#76C0FF"
+        app:cardCornerRadius="15dp"
+        android:layout_margin="25dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:padding="20dp">
+           <EditText
+               android:id="@+id/etUserName"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/bg_edit_box"
+               android:padding="15dp"
+               android:maxLength="12"
+               android:inputType="text"
+               android:maxLines="1"
+               app:layout_constraintBottom_toTopOf="@id/etPassword"
+               app:layout_constraintTop_toTopOf="parent"
+               android:layout_margin="5dp"
+               android:textColorHint="@color/black"
+               android:textColor="@color/white"
+               android:textSize="15sp"
+               android:textStyle="bold"
+               android:hint="username"
+               />
+
+           <EditText
+               android:id="@+id/etPassword"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/bg_edit_box"
+               android:padding="15dp"
+               android:inputType="textPassword"
+               android:textColor="@color/white"
+               android:maxLines="1"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/etUserName"
+               android:layout_marginTop="8dp"
+               android:layout_margin="5dp"
+               android:textColorHint="@color/black"
+               android:textSize="15sp"
+               android:textStyle="bold"
+               android:hint="password"/>
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_btn"
+        app:layout_constraintTop_toBottomOf="@id/cvLogin"
+        android:layout_margin="20dp"
+        android:text="Login"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="15dp"
+        android:textSize="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
